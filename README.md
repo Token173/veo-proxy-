@@ -8,9 +8,8 @@ Token173（https://token173.net）把 Veo 和豆包 Seedance、SD 2.5 视频放�
 
 | 模型 ID | 特点 |
 |---|---|
-| `veo-3.1` | 文本/图生视频，原生音频，支持首尾帧 |
+| `veo_3_1` | 文本/图生视频，原生音频，支持首尾帧 |
 | `doubao-seedance-2-0-fast-260128` | 豆包快速版，出片快，价格低 |
-| `sd-2-5-480p` | SD 2.5 480p，跑量素材够用 |
 
 ## 提交任务
 
@@ -21,7 +20,7 @@ curl -X POST https://token173.net/v1/videos/generations \
   -H "Authorization: Bearer sk-你的令牌" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "veo-3.1",
+    "model": "veo_3_1",
     "prompt": "清晨的海边公路，镜头跟随一辆自行车缓慢前进，侧逆光",
     "aspect_ratio": "16:9",
     "duration": 8
@@ -45,7 +44,7 @@ r = requests.post(
     "https://token173.net/v1/videos/generations",
     headers=H,
     json={
-        "model": "veo-3.1",
+        "model": "veo_3_1",
         "prompt": "清晨的海边公路，镜头跟随一辆自行车缓慢前进，侧逆光",
         "aspect_ratio": "16:9",
         "duration": 8,
@@ -69,7 +68,7 @@ while True:
 
 ```json
 {
-  "model": "veo-3.1",
+  "model": "veo_3_1",
   "prompt": "镜头缓慢推近，衣服轻微摆动",
   "image_url": "https://你的图床/cover.jpg",
   "aspect_ratio": "9:16",
@@ -83,10 +82,9 @@ while True:
 
 | 需求 | 模型 |
 |---|---|
-| 高质量品牌短片、要音频 | `veo-3.1` |
+| 高质量品牌短片、要音频 | `veo_3_1` |
 | 一天几十条社媒短视频 | `doubao-seedance-2-0-fast-260128` |
-| 快速草稿、看镜头感 | `sd-2-5-480p` |
-| 图生视频做商品展示 | `veo-3.1`，9:16 竖版 |
+| 图生视频做商品展示 | `veo_3_1`，9:16 竖版 |
 
 先低价模型跑通脚本，确定提示词有效再换 Veo 出成品，这条路径最省钱。
 
